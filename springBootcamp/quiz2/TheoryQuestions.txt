@@ -7,4 +7,17 @@ System.out.println("Navin Reddy");
 } 
 //it will print infinite loop .So run time expection will occur.
 
+Which loop executes the code block based on a condition that is checked before each iteration in Java?
+Ans.while and for loop
+
+What is the type of the do-while loop in terms of control flow?
+Ans.Exit-controlled loop
+
+
+
+
+
+
+
+
 
