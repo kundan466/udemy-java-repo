@@ -1,0 +1,10 @@
+What is the output of the following program in Java?
+
+if(1) {
+
+System.out.println("Navin Reddy");
+
+} 
+//it will print infinite loop .So run time expection will occur.
+
+
