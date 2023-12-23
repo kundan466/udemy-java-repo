@@ -1,0 +1,57 @@
+Q1.Does the new keyword allocate memory for an object during runtime in Java?
+Ans.yes(object creation in java occurs at runtime)
+
+Q2.Does the main() method be overloaded in Java?
+Ans.Yes(static methods are overloaded in java ,so main is static method it can be overloaded)
+
+Q3.What will happen if a local variable has the same name as an instance variable within a class?
+Ans.Local variable hides the instance variable
+
+Q4.Which term is used when we can define two or more methods of the same name within the same class?
+Ans.Method overloading
+
+Q6.Where are instance variables allocated in memory?
+Ans.Heap memory
+
+Q7.Which subsystem of the JVM is responsible for loading class files?
+Ans.Classloader
+
+Q8.What type of data is allowed in an array in Java?
+Ans.Homogenous data types
+
+Q9.What does arr[arr.length-1].length represents in a multidimensional array?
+Ans.Length of last row in array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
