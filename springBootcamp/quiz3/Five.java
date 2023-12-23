@@ -4,7 +4,7 @@ public class Five {
     public static void main(String[] args) {
         Message ob = new Message();
 
-        ob.printMessage(5);
+        ob.printMessage(5); // Message primitive: 5
     }
 }
 

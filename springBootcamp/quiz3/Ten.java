@@ -10,6 +10,6 @@ public class Ten {
 
             result = result + password[i];
         }
-        System.out.println(result);
+        System.out.println(result); // output:XY04XY03
     }
 }
