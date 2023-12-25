@@ -1,0 +1,163 @@
+Q1.Which access modifier is used to access members of an inherited class when two classes are in different packages?
+Ans.Protected keyword
+
+Q2.Which principle emphasizes the binding of data and methods within a class?
+Ans.Encapsulation
+
+Q3.Can the value of a variable be changed if it is initialized with the 'final' keyword?
+Ans.No
+
+Q5.Which keyword is used to define a class member that can be accessed without reference to any object?
+Ans.static
+
+Q6.Which keyword is used to achieve inheritance in Java?
+Ans.extends 
+
+Q7.Can a class be a superclass of itself in Java?
+Ans.No
+
+Q8.Is method shadowing or method hiding possible with the private method?
+Ans.Yes
+
+Q9.What is the return type of overridden methods?
+Ans.Covariant Return Types
+
+Q10.What interface is implemented by the String, StringBuffer, and StringBuilder classes?
+Ans.CharSequence
+
+Q12.Which constructor of StringBuffer reserves room for 16 characters without reallocation?
+Ans.StringBuffer()
+
+Q13.Which class can be used when multiple threads are involved and thread-safety is required?
+Ans.StringBuffer
+
+Q16.What Java keyword is employed for specifying a default method within a Java interface?
+Ans.default
+
+Q17.When implementing a Java interface, methods must possess the following access modifier:
+Ans.public
+
+Q18.By default, the methods enclosed within a Java interface are characterized as:
+Ans.abstarct and public
+
+Q21.Comment on the statement: "The method defined by a lambda expression does not have a name."
+Ans.True
+
+Q22
+What is the output of the code?
+
+class A{
+
+public void run(){
+
+System.out.println("I am running");
+
+}
+
+}
+
+class Outer {
+
+static A obj=new A(){};
+
+public static void main(String []args){
+
+obj.run(); //I am running
+
+}
+
+}
+
+Q23.What does Inner classes promote in Java?
+Ans.Composition and aggregation
+
+Q25.What is the key requirement for an interface to be considered a functional interface?
+Ans.It must be defined only one abstract method
+
+Q26.Which of the given expressions returns 'true' if the value of the parameter n is even?
+Ans.n->(n%2)==0
+
+Q27.Can a subclass reference variable be assigned to a superclass reference variable?
+Ans.Yes(downcasting)
+
+Q28.What is the purpose of the lambda operator (->) in Java lambda expressions?
+Ans.Divides the expression into parameter lsit and lambda body
+
+Q29.In what order are the constructors executed when a class hierarchy is created?
+Ans.From superclass to subclass
+
+Q30.Can an abstract class be instantiated directly with the new operator in Java?
+Ans.No
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
