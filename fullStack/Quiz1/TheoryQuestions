@@ -1,1 +1,120 @@
 
+Q1.Which are the keywords not in use?
+Ans.const and goto
+
+Q2.Keywords are non-reserved word in java
+Ans.false
+
+Q3.Which method is the entry point for Java programs?
+Ans.public static void min(String [] args)
+
+Q4.Data is stored in
+Ans.Variable
+
+Q5.Datatypes impacts on memory allocation
+Ans.true
+
+Q6.public class Test_Variable {
+    public static void main(String[] args){
+        int value = 10;
+        int value1=”java”;
+        System.out.println(value);
+        System.out.println(value1);
+    }
+}
+Ans.Type mismatch(bacause here java is declared as int)
+
+Q7.Variable name is case-sensitive.
+Ans.true
+
+Q8.Space is permitted in variable name.
+Ans.false
+
+Q9.What is the range of short?
+Ans.-32,768 to 32,767
+
+Q10.Which suffix is used while declaring a long data type?
+Ans.L
+
+Q11.public class TestIntDataType{
+public static void main(String[] args){
+    byte value = -128;
+    System.out.println(value);
+    }
+}
+Ans.it gives -128 as output
+
+Q12.
+public class TestFloat{
+public static void main(String[] args){
+    int number1= 10.128952248;
+    float number2 = 10.128952248f;
+    double number3 = 10.128952248d;
+ 
+    System.out.println(number1);
+    System.out.println(number2);
+    System.out.println(number3);
+    }
+}
+Ans.It gives compite time error because float number1 is declared as int
+
+Q13.What is Precision of float type variable?
+Ans.7
+
+Q14.Identify the data type with the following sentences:
+1.The length should be one
+2. Enclosed between quotes
+3. Any character on the keyboard is allowed
+Ans.char
+
+Q15.In Java, boolean datatype can be represented by 1 or 0.
+Ans.false(it represented by true or false)
+
+Q16.How to cast 64-bit datatype into 32-bit datatype?
+Ans.Exxplicit typecasting
+
+Q17.In implicit Typecasting, what is the correct sequence of data type compatibility?
+Ans.byte->short->int->long->float->double
+
+Q18.In Java, we can create BigDecimal objects of which of the following types?
+Ans.int.long,character array,string,double
+
+Q19.The floating-point data types are used for calculating accurate precise values in a financial calculation.
+Ans.true
+
+Q20.BigDecimal is a part of which Java package?
+Ans.java.math
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
