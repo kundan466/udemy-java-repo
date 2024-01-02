@@ -1,0 +1,88 @@
+Q1.doGet method specifically serves the request of ?
+Ans.get request
+
+Q2.protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Hello world");
+	} 
+Ans.console
+
+Q3.protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.getWriter().println("Hello World");
+	} 
+Ans.web browser
+
+Q4.Rearrange the servlet life cycle in correct order
+1 Creates the instance of the servlet class
+2 Loads the servlet class
+3 call the servlet service() method
+4 call the servlet init() method
+5 call the servlet destroy() method
+Ans.2 1 4 3 5
+
+Q5.Syntax of declarations and expression element?
+Ans.<%!declarations%> and <%=expression%>
+
+Q6.<body>
+<%!int a=25; %>
+<%=a*25+10 %>
+</body>
+the above above code prints ?
+Ans.635
+
+Q7.Syntax of scriptlet element?
+Ans.<%scriptlets%>
+
+Q8.Inside scriptlet element, We can make use only single line of code?
+Ans.false
+
+Q9.<body>
+<%!int a;%>
+<% a=5;
+for(int i=0;i<a;i++)
+{
+	out.print(a);
+}
+%>
+Ans.55555
+
+Q10.we can make use of access specifier in scriptlets?
+Ans.false
+
+Q11.Choose the correct syntax of JSP comment
+Ans.<%--comment--%>
+
+Q12.Does java(//comment) and HTML(<!--comment -->) comments works for JSP element?
+Ans.No
+
+Q13.Syntax of Directive Element?
+Ans.<%@directive%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
