@@ -1,0 +1,103 @@
+Q1.Which method is used to append element in ArrayList?
+Ans.add();
+
+Q2.ArrayList can contain objects only.
+Ans.true
+
+Q3.The String is primitive datatype.
+Ans.false
+
+Q4.The …….. class wraps a value of the int primitive datatype in an object.
+Ans.Integer
+
+Q5.In Wrapper class, autoboxing and unboxing are user-defined.
+Ans.false
+
+Q6.What are the advantages of collection framework?
+A. No third party API required.
+B. No need to create API from handling collection objects.
+C. The collections framework is tested and optimized.
+Please chose the correct statements.
+Ans.A,B,C
+
+Q7.Which collection has faster read operation?
+Ans.ArrayList
+
+Q8.The ……….. is the collection where elements are arranged one above other.
+Ans.Stack
+
+Q9.The stack follows LIFO (Last In First Out ) patterns.
+Ans.true
+
+Q10.Which method is used to add element in the stack?
+Ans.push();
+
+Q11.In the LinkedList, a node (not considering first node) consists of ……………..
+Ans.current node data and address of the next node
+
+Q12.In the LinkedList, the first Node consists of ……………..
+Ans.address of the next node
+
+Q13.The sort() method sorts the List in ................order.
+Ans.natural
+
+Q14.The compareTo method returns value -1 when both input values are the same.
+Ans.false
+
+Q15.The ....................... method of the ......................................... interface can be used to sort Lists and arrays of objects that are instances of a class that implements in a natural ordering of that class.
+Ans.compareTo(),Comparable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
