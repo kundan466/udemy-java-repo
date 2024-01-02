@@ -1,0 +1,105 @@
+Q1.Class is user-defined datatype.
+Ans.true
+
+Q2.Private members of the class are not accessible from outside the class.
+Ans.true
+
+Q3.Setter Method is used to update the variable in object
+Ans.true
+
+Q4.Getter Method is used to retrieve value of the variable from object
+Ans.true
+
+Q5.Constructor can have different name then the class.
+Ans.false
+
+Q6.Constructor has return value.
+Ans.false
+
+Q7.Java adds default constructor in class, even if parameterized constructor is declared by the user
+Ans.false
+
+Q8.What type of relationship does child class have with parent class?
+Ans.IS-A relationship
+
+Q9.Extends keyword is used to inherit the properties of the class.
+Ans.true
+
+Q10.In Java, The nameless object is known as ……………………
+Ans.anonymous object
+
+Q11.In Java, Variables of class are set as …………. to achieve encapsulation.
+Ans.Private
+
+Q12.Setter and getter methods are used to obtain encapsulation.
+Ans.true
+
+Q13.Class variables are hidden from other class in encapsulation.
+Ans.true
+
+Q14.class Bank{
+ 
+    public void print() {
+ 
+            System.out.println("Printing passbook for bank");
+ 
+        }
+ }
+ 
+class SbiBank extends Bank{
+ 
+    public void print() {
+            System.out.println("Printing passbook for SBI bank");
+        }
+ 
+}
+ 
+public class TestPolymorphism {
+ 
+public static void main(String[] args) {
+        Bank BankPrint= new SbiBank();
+        BankPrint.print();
+ 
+    }
+ 
+}
+Ans.printing passbook for SBI bank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
