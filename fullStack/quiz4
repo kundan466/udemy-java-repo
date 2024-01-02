@@ -1,0 +1,43 @@
+Q1.Switch case statement is replacement of if else statement.
+Ans.false
+
+Q2.Float type of variable is not allowed in switch expression.
+Ans.true
+
+Q3.Infinite for-loop repeats itself unless it is forced to stop.
+Ans.true
+
+Q4.Components of loop are......
+Ans.Initialisation of variable,condition and variable Increment/Decrement
+
+Q5.In while loop, loop might not be executed at all.
+Ans.true
+
+Q6.In .............., Java will execute the block first and then check the loop conditional expression.
+Ans.do while loop
+
+Q7.The break statement transfers the flow of control out of …..........
+Ans.current scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
