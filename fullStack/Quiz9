@@ -1,0 +1,41 @@
+Q1.In array, elements are stored in an adjacent memory location.
+Ans.true
+
+Q2.Index value of first element in an array is 1.
+Ans.false
+
+Q3. public static void main(String[] args) {
+                    int[] arrayInt = {1,2};
+                    int i;
+ 
+                    for(i=0;i<=arrayInt.length;i++) {
+ 
+                            System.out.println(arrayInt[i]);
+                        }
+ 
+            }
+Ans.1,2,arrayIndexOutOfBoundException
+
+Q4. public static void main(String[] args) {
+ 
+                int[] arrayInt = {1,2};
+ 
+                for(String i: arrayInt ){
+ 
+                        System.out.println(i);
+                
+                }
+        }
+Ans.Type mismatch error
+
+Q5.When we are pass reference of element to the method, it's called as ............
+Ans.call by reference
+
+
+
+
+
+
+
+
+
