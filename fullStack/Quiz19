@@ -1,0 +1,48 @@
+Q1.Which of the following is used to invalidate a session ?
+Ans.request.getSession().invalidate();
+
+Q2.what happens if we set request.getSession(true)?
+Ans.returns current session,if no session is associated with the request then returns new session
+
+Q3.Define cookie?
+Ans.Cookie is a chunk of memory in the browser for the specific webiste
+
+Q4.which of the following code retrieves all the cookies for the application/website?
+Ans.request.getCookies()
+
+Q5.What happens when we invalidate a session?
+Ans.New session id is geenrated and any attributes associated with the old session is destroyed
+
+Q6.______________________ method is used to get the baseURL.
+Ans.request.getContextPath()
+
+Q7._____________________ method is used to get the encoded URL.
+Ans.response.encodeURL();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
