@@ -1,0 +1,49 @@
+Q1.Whenever we submit form using GET method the information is
+Ans.visible to the user and gets submitted by the URL
+
+Q2.Why we use the action attribute in form tag?
+Ans.We use the action attribute to specify the URL where the form must be submitted
+
+Q3.Use of method attribute in form tag?
+Ans.We use the method attribute to specify the Http method
+
+Q4.____________________ method used to get the value of form parameter that returns multiple values.
+Ans.request.getParameterValues()
+
+Q5.___________________ method used to get the context path.
+Ans.request.getContextPath()
+
+Q6._______________ attribute is used to mark an input field as mandatory.
+Ans.required
+
+Q7.Required attribute works for checkbox and radio button?
+Ans.false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
