@@ -5,7 +5,7 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.regression import LinearRegression
 from pyspark.sql.functions import corr
 
-spark=SparkSesssion.builder.appname('cruise').getOrCreate()
+spark=SparkSesssion.builder.appName('cruise').getOrCreate()
 df=spark.read.csv('cruise_ship_info.csv',header=True,inferSchema=True)
 indexer=StringIndexer(inputCol='Cruise_line',outputCol='crew')
 indexer=indexer.fit(df).transform(df)
@@ -23,8 +23,8 @@ ship_lr=LinearRegression(labelCol='crew')
 trained_ship_model=ship_lr.fit(train_data)
 ship_results=trained_ship_model.evaluate(test_data)
 
-ship_results.rootmeanSquaredError //0.6720
-ship_results.r2 //0.9560
+ship_results.rootmeanSquaredError #0.6720
+ship_results.r2 #0.9560
 ship_results.meanSquaredError //0.4516
 ship_results.meanAbsoluteError 
 
