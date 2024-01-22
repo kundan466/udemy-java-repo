@@ -1,0 +1,43 @@
+Q1.What is this code called as?
+
+begin
+ null;
+end;
+Ans.anonymous block(if we write a code in worksheet and run it directly it is anonymous block)
+
+
+Q2.What you do in DECLARE Section?
+Ans.You declare your variables,cursors or user defined expections in it 
+
+Q3.Why will this code have an error?
+
+DECLARE
+BEGIN
+END;
+Ans.since we do not write any code between begin and end keywords
+
+Q4.Which one is not a type of blocks?
+Ans.packages(anonymous,function and procedures are the three types of blocks)
+
+Q5.Which one is the code for PL/SQL Outputs?
+Ans.dbms_output.put_line();
+
+Q6.If you execute dbms_output.put_line and you cannot see the output, which one can be the reason?
+Ans.you may forgot to execute set serveroutput on command (to get output)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

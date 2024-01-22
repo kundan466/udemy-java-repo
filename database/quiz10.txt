@@ -1,0 +1,149 @@
+Q1.Which of these cannot be declared in a package?
+Ans.views 
+
+Q2.Why package specification also needs to be created?
+Ans.for encapsulation(While the objects declared within a package spec is public, all the objects declared within a package body is private. So using this way, we encapsulate our private objects and operations)
+
+Q3.How can we make a subprogram private in a package?
+Ans.Any object which is declared within the package body but not declared within the package spec are considered as private objects
+
+Q4.Which of these is correct about package creation?
+Ans.we can create a bodyless package spec(We don't have to create package body, but we have to create package spec if we want to create a package)
+
+Q5.Considering the package spec creation below : 
+
+CREATE OR REPLACE
+PACKAGE EMP AS
+ v_salary_increase_rate number := 0.3;
+ cursor cur_emps is select * from employees;
+ function get_avg_sal(p_dept_id int) return number;
+END EMP;
+Knowing that we haven't created the package body yet, what do we need to do to make this code compile successfully?
+Ans.the code will be compiled withut any problem
+
+Q6.If we declare variables with the same name twice in a package (one in the package body and one in the package spec), what will happen when we call that variable?
+Ans.we cannot create,as we will get an error if we try to create a package in this way(We cannot use the same variable name as both in the package spec and package body)
+
+Q7.
+Considering the following package body : 
+
+CREATE OR REPLACE PACKAGE BODY emp_pkg_test AS
+ 
+PROCEDURE print_lines IS
+  BEGIN
+   dbms_output.put_line('--------------------');
+  END;
+  
+v_avg_sal NUMBER;
+PROCEDURE print_avg_sal(p_dept_id INT) AS
+  BEGIN
+    print_lines;
+    SELECT AVG(salary) INTO v_avg_sal FROM employees WHERE department_id = p_dept_id;
+    dbms_output.put_line('The average is : '||v_avg_sal);
+    print_lines;
+END print_avg_sal;
+ 
+END emp_pkg_test;
+Which of the following is the reason for getting an error?
+Ans.we need to declare the local variables at the top of the package(Local variables in a package need to be declared before all the subprograms)
+
+Q8.Considering the following package body : 
+
+CREATE OR REPLACE PACKAGE BODY emp_pkg_test AS
+   PROCEDURE print_average_salaries AS
+      BEGIN
+       FOR dept IN (SELECT department_id FROM departments) LOOP
+        dbms_output.put_line('The average salary for department '||dept.department_id||' is : '|| get_avg_sal(dept.department_id));
+       END LOOP;
+      END;
+   FUNCTION get_avg_sal(p_dept_id INT) RETURN NUMBER AS
+    v_avg_sal NUMBER:=0;
+      BEGIN
+        SELECT AVG(salary) INTO v_avg_sal FROM employees WHERE department_id = p_dept_id;
+     RETURN v_avg_sal;
+    END get_avg_sal;
+END emp_pkg_test;
+Knowing that these two subprograms are private, which of these is not a way of fixing the problem?
+Ans.specifying the procedure in the package spec
+
+Q9.Considering the following package body : 
+
+CREATE OR REPLACE PACKAGE BODY emp_pkg_test AS
+   PROCEDURE prc1 AS
+     BEGIN
+       dbms_output.put_line('The first function is executed!');
+       prc2();
+     END;
+   PROCEDURE prc2 AS
+      BEGIN
+        dbms_output.put_line('The second function is executed');
+     END;
+BEGIN
+  dbms_output.put_line('Package initialized');
+END emp_pkg_test;
+If the following code is executed on the SQL Developer tool, what will be the output?
+
+exec emp_pkg_test.prc1();
+exec emp_pkg_test.prc1();
+Ans.package intialized 
+the first fucntiion is executed!
+the second function is executed
+
+pl/sql procedure successfully completed
+
+the first fucntiion is executed!
+the second function is executed
+
+pl/sql procedure successfully completed
+
+Q10.Serially reusable packages cannot be accessed from ___________.
+Ans.triggers
+
+Q11.Considering the following package spec : 
+
+create or replace package test_pkg is
+  var_test number:= 2;
+end;
+User A executes the following code :
+
+BEGIN
+ test_pkg.var_test  := 5;
+ dbms_output.put_line(test_pkg.var_test);
+END;
+After user A executes the code above, user B executes the following code : 
+
+BEGIN
+ dbms_output.put_line(test_pkg.var_test);
+END;
+What will be the output that user B will have?
+Ans.2 (The change made by user A does not affect other users)
+
+Q12.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

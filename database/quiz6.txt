@@ -1,0 +1,118 @@
+Q1.Which of these are not one of the composite data types?
+Ans.Hash Tables
+
+Q2.Where does our variables are stored while our program runs?
+Ans.All the variables that we created are stored in the Program Global Area while our program runs
+
+Q3.Also called by index by tables. It is a type of the collections. The key does not need to start from 1. It can be any number value or a string. It is not bounded.
+
+This expalation is suitable for : 
+Ans.Associative arrays
+
+Q4.We use colllection data types when :
+Ans.want to store some related data as rows
+
+Q5.If I want to store a row of a table, which data type do I use?
+Ans.record
+
+Q6.Which of these are wrong for a record?
+Ans.we can get a row type of a table with using %type attribute
+
+Q7.What is wrong with the code below?
+
+declare
+  r_emp employees%rowtype;
+begin
+  select first_name,last_name into r_emp from employees where employee_id = '101';
+  dbms_output.put_line(r_emp.first_name|| ' ' ||r_emp.last_name);
+end;
+Ans.We selected variables in our select query, but our record has many variables in it (As much as employees table has the columns). So it will have "Too Many Values" error.
+
+Q8.What is wrong with the record creation below?
+
+  type t_emp is record (employee_id pls_integer,
+                        first_name varchar2(50),
+                        last_name employees.last_name%type,
+                        salary employees.salary%type,
+                        r_jobs jobs%rowtype);
+  r_emp t_emp%rowtype;
+Ans.You cannot use %rowtype attribute for a type. You just need to use its name
+
+Q9.Which of these are true for this usage of records?
+
+declare
+    r_emp employees%rowtype;
+begin
+    select * into r_emp from employees_copy where employee_id = 104;
+    r_emp.salary := 0;
+    r_emp.commission_pct := 0;
+    r_emp.department_id := null;
+    update employees_copy set row = r_emp where employee_id = 104;
+end;
+Ans.This usage is completely valid and useful dml operations with a record.
+
+Q10.What is wrong with the query below?
+
+declare
+  type e_list is varray(5) of varchar2(50);
+  employees e_list;
+begin
+  employees := e_list('Alex','Bruce','John','Bob');
+  employees(5) := 'Jim';
+  for i in employees.first()..employees.count() loop
+    dbms_output.put_line(employees(i));
+  end loop;
+end;
+Ans.we need to extend our varray variable before adding the 5th element
+
+Q11.Which one is true for the count() function with the collections?
+Ans.returns the number of elements inside of the collection
+
+Q12.Which one is wrong for the varrays?
+Ans.Count function returns only the number of values in it.
+
+Q13.create or replace type e_list is table of varchar2(20); 
+
+With this code, what is the type that you created in schema level?
+Ans.Nested table
+
+Q14.Which of these cannot be used with collections?
+Ans.add() method
+
+Q15.If you see such a code below, what does it remind to you?
+
+select e.first_name,e.last_name,p.p_type,p.p_number from emps_with_phones e, table(e.phone_number) p; 
+Ans.we stored a collection in our phone_number column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+Q1.Which of these is true for using SQL in PL/SQL?
+Ans.We can get the values into our variables with using INTO clause
+
+Q2.In the code below, there are 3 wrong usages.
+
+declare
+ v_name varchar2(50);
+ v_salary employees.salary%type;
+ table_name varchar2(20) := 'EMPLOYEES';
+ employee_id employees.employee_id%type := 130;
+begin
+  select first_name ||' '|| last_name, salary into v_salary, v_name from table_name where employee_id = employee_id;
+  dbms_output.put_line('The salary of '|| v_name || ' is : '|| v_salary );
+end;
+Ans.We cannot write a direct select clause inside of a PL/SQL block. But we can use select .. into clause. So this is not a reason of the error in this code.
+
+
+Q3.Which of these is not a true usage of sequences with PL/SQL?
+
+We assume we have a sequence with the name of employee_id_seq .
+
+Ans.employee_id_seq.nextval=20;

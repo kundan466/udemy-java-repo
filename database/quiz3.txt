@@ -1,0 +1,94 @@
+Q1.Why we use variables?
+Ans.to save the data into the memory temporarily and modify if you need
+
+Q2.Which of this is not a type of variables?
+Ans.Binary data types
+
+Q3.Which one is a wrong declaration of a variable type?
+Ans.date('06-06-2002'){we need to do like this date d:='06-06-2022'}
+
+Q4.Which of these is wrong for the variable naming rules?
+Ans.can be maximum 100 characters length(maximum length of variable name can be 30 characters)
+
+Q5.declare 
+  v_temp varchar2(50) not null default "TEMP";
+begin
+  dbms_output.put_line(v_temp);
+end;
+Ans.we need to write TEMP text inisde of single quotes.Double quotes caused the error
+
+Q6.Which one is wrong for why we use %type attribute?
+Ans.to get the type of a database row
+
+Q7.Which one is not the advantage of using %type attribute?
+Ans.you dont need to assign any value if you used the %type attribute.it gets the value from the column or variable that you referenced
+
+Q8.Which one is the correct single line commenting for the PL/SQL ? 
+Ans. -----hello
+
+Q9.What will be the output of this code?
+
+declare
+v_num number := 20;
+begin
+v_num := 40;
+  declare
+  v_num number := 15;
+  begin
+    dbms_output.put_line('1 -> ' || v_num);
+    v_num := 30;
+  end;
+dbms_output.put_line('2 -> ' || v_num);
+end;
+Ans. 1->15,2->40(becuase variables cant have access to other variables which are outside the block)
+
+Q10.Which one is wrong for the SQL Developer bind variables?
+Ans.you can reach them from different worksheets(you can reach them only in that particular worksheet)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

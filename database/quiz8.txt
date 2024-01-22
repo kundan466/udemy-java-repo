@@ -1,0 +1,131 @@
+//quiz8
+
+Q1.What is the difference between errors and exceptions?
+Ans.errors are captured whilecompiling the code-exceptions are captured while running the code
+
+Q2.Which of these is not a type of exceptions?
+Ans.System generated exceptions
+
+Q3.What will happen when we execute the following code?
+
+declare
+ v_name varchar2(5);
+begin
+ select first_name into v_name from employees where employee_id = 100;
+ dbms_output.put_line('Hello'||v_name);
+exception
+ when no_data_found then
+  dbms_output.put_line('There is no employee with the selected id');
+ end exception;
+end;
+Ans."end exception;" text is wrong here. We specify the exception block right before the last "end" of the block, so we do not specify any additional "end" keyword for the exceptions
+
+Q4.Which of these functions are used to get the error code of the exceptions?
+Ans.The SQLCODE function returns the error code of the last raised exception
+
+Q5.Which of these is wrong about the SQLCODE function?
+Ans.returns null when no errors occured
+
+Q6.What will be the output of the following code?
+
+DECLARE
+  v_name VARCHAR2(6);
+  v_department_name VARCHAR2(100);
+BEGIN
+  SELECT first_name INTO v_name FROM employees WHERE job_id = 'IT_PROG';
+  SELECT department_id INTO v_department_name FROM employees WHERE first_name = v_name;
+  dbms_output.put_line('Hello '|| v_name || '. Your department id is : '|| v_department_name );
+EXCEPTION
+  WHEN no_data_found THEN
+    dbms_output.put_line('There is no employee with this Job ID');
+  WHEN too_many_rows THEN
+    dbms_output.put_line('There are more than one employees with the name '|| v_name);
+  WHEN OTHERS THEN
+    dbms_output.put_line('All the exceptions are catched and handled!');
+END;
+Ans.There are morethan one employeed with the name(Once an exception is caught , the other exceptions at the same block are skipped. As the first select statement will return multiple names and try to select them into one variable, it will return an error and will not be able to assign any of these names to the v_name variable. So the text in the exception block will be written with a NULL v_name value.)
+
+Q7.Which of these is not a way of raising an exception?
+Ans.usinf raise_exception procedure
+
+Q8.Which type of exception is declared within the code below? : 
+
+declare
+  not_valid_email exception;
+  pragma exception_init(not_valid_email,-01402);
+begin
+  UPDATE employees_copy set email = 'test' where employee_id = 100;
+exception
+  when not_valid_email then
+    dbms_output.put_line('That is not a valid email address!');
+end;
+Ans.Non pre defined exception
+
+Q9.Will this code work? If not, why?
+
+declare
+no_comm_pct exception;
+v_commission_pct pls_integer;
+begin
+  select commission_pct into v_commission_pct from employees where employee_id = 100;
+  if v_commission_pct is null then
+  raise_application_error(-01407,'The salary of the selected employee is too high!',false);
+  end if;
+  dbms_output.put_line('No commission percentage for this empoloyee');
+exception
+  when no_comm_pct then
+  dbms_output.put_line('This employee needs to have commission percentage');
+end;
+Ans.it will return an error because the usage of the raise_application_error procedure is incorrect(The first parameter of the rapse_application_error function should be between -20000 and -20999)
+
+Q10.Question 10:
+What is the output that you will get when you execute the following code?
+
+DECLARE
+  v_new_sal NUMBER(3) := 1000;
+  value_too_large EXCEPTION;
+  PRAGMA exception_init(value_too_large,-06502);
+BEGIN
+  UPDATE employees SET salary = v_new_sal WHERE employee_id = 102;
+  DBMS_OUTPUT.PUT_LINE('The salary is executed successfully!');
+EXCEPTION
+  WHEN value_too_large THEN
+    DBMS_OUTPUT.PUT_LINE('This value is too high to assign!');
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('The exception is handled!');
+END;
+Ans.ORA-06502:pl/sql:numeric or value error:number precision too large(The exceptions occurred at the declaration section cannot be handled in that block's exception section. As the error occurred when assigning 1000 to the variable v_new_sal which can store up to 3 digits, it returns an exception and that exception is raised to the caller subprogram)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

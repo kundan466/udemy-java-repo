@@ -1,0 +1,53 @@
+Q1.Which of these is not a cursor attribute in Oracle PL/SQL?
+Ans.%isclosed(%found,%notfound,%isopen,%rowcount are attributes)
+
+Q2.What will happen if we keep fetching from a cursor after fetching all the values?
+Ans.will return last record
+
+Q3.Why do we use the FOR UPDATE clause in PL/SQL?
+Ans.lock the selected rows to the other users's changes until we end the transaction
+
+Q4.Which of the following is incorrect about reference cursors?
+Ans.we can share reference cursors with other servers
+
+Q5.Which of these is incorrect about Strong Reference Cursors and Weak Reference Cursors comparison?
+Ans.any valid query will be accepted for both reference cursor types
+
+Q6.Which line of this code is incorrect?
+
+declare
+ type t_emps is ref cursor return employees%rowtype;
+ rc_emps t_emps;
+ r_emps employees%rowtype;
+begin
+  open rc_emps as select * from employees;
+    loop
+      fetch rc_emps into r_emps;
+      exit when rc_emps%notfound;
+      dbms_output.put_line(r_emps.first_name|| ' ' || r_emps.last_name);
+    end loop;
+  close rc_emps;
+end;
+Ans.open rc_emps as select * from employees(The reference cursors are opened using the for keyword instead of as keyword. "open rc_emps for select * from employees;")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

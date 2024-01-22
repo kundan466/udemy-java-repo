@@ -1,0 +1,117 @@
+Q1.Which of these cannot be considered as control structures?
+Ans.constarints
+
+Q2.Which of these is the true usage of if clauses?
+Ans.if a is null then 
+	//statements
+    else //statements
+    end if ;
+
+Q3.Which type of case statements/expressions is this code considered as?
+
+CASE
+  WHEN v_job_code = 'SA_MAN' THEN
+    v_salary_increase := 0.2;
+    dbms_output.put_line('Salary increase for SA_MAN is:'|| v_salary_increase );
+  WHEN v_department = 'IT' and v_job_code = 'IT_PROG' THEN
+    v_salary_increase := 0.2;
+    dbms_output.put_line('Salary increase for IT_PROG is:'|| v_salary_increase );
+  ELSE
+    v_salary_increase := 0;
+    dbms_output.put_line('Salary increase for others:'|| v_salary_increase );
+END CASE;
+Ans.searched case statement(because there are lists in conditions of when)
+
+Q4.What is the reason that this code will not work?
+
+DECLARE
+  v_job_code        VARCHAR2(10) := 'IT_PROG';
+  v_department      VARCHAR2(10) := 'IT';
+  v_salary_increase    NUMBER;
+BEGIN
+  v_salary_increase:= CASE 
+                     WHEN v_job_code  ='SA_MAN' THEN 0.2
+                     WHEN v_department='IT' AND v_job_code='IT_PROG' THEN 0.3
+                   ELSE 0
+                   END CASE;
+  dbms_output.put_line('Your salary increase is : '|| v_salary_increase);
+END;
+Ans.Since this is a searched case expression, we cannot write "end case" . We can write "end case" keywords only with case statements.
+
+Q5.Which one is not a type of loops?
+Ans.while..in loops
+
+Q6.What will be the output of this code?
+
+DECLARE
+v_counter NUMBER(2) := 1;
+BEGIN
+  LOOP
+    dbms_output.put_line('My counter is : '|| v_counter);
+    v_counter := v_counter + 1;
+    EXIT WHEN v_counter < 10;
+  END LOOP;
+  dbms_output.put_line('My counter is : '|| v_counter);
+END;
+Ans.My counter is : 1
+My counter is : 2
+
+Q7.What will be the output of this code?
+
+DECLARE
+v_counter NUMBER(2) := 1;
+BEGIN
+  WHILE v_counter < 10 LOOP
+    dbms_output.put_line('My counter is : '|| v_counter);
+    v_counter := v_counter + 1;
+    EXIT WHEN v_counter = 3;
+  END LOOP;
+END;
+Ans.My counter is : 1
+My counter is : 2
+
+
+Q8.Based on the code below, which one is a wrong information?
+
+BEGIN
+  FOR i IN REVERSE 1..3 LOOP
+    i := i+1;
+    dbms_output.put_line('My counter is : '|| i);
+  END LOOP;
+dbms_output.put_line('The last value of the counter is : '|| i);
+END;
+Ans.if we write like the code below,the ouput will be from 1 to 3:
+	for i in REVERSE 3..1 loop
+		dbms_output.put_line(i);
+
+Q9.What will be output of this code?
+
+DECLARE
+ v_inner NUMBER := 1;
+BEGIN
+  FOR v_outer IN 1..3 LOOP
+    dbms_output.put_line('My outer value is : ' || v_outer );
+    v_inner := 1;
+    WHILE v_inner*v_outer < 15 LOOP
+      CONTINUE WHEN MOD(v_inner*v_outer,3) = 0;
+      v_inner := v_inner+1;
+      dbms_output.put_line(' My inner value is : ' || v_inner );
+    END LOOP;
+  END LOOP;
+END;
+Ans.since we have written the continue statement before the increment of v_inner, it will not increase becuase when the continue statement is satisfied, it won't increase so it will be an infinite loop
+
+Q10.Which one is wrong for the GOTO satatement?
+Ans.you cannot go back with goto statements ,can go only further
+
+
+
+
+
+
+
+
+
+
+
+
