@@ -1,0 +1,66 @@
+Q1.Let
+URL---> http://localhost:8080/HelloJSP/HelloWorld.jsp?var1=peter&var2=12
+<body>
+<% out.println("Name : "+request.getParameter("name"));
+out.print("Age : "+request.getParameter("age"));
+%>
+</body>
+Ans.Name:null and Age:null
+
+Q2.It is always good to use ___________________ for static content and ___________________ for dynamic content.
+Ans.directive include and jsp include
+
+Q3.Syntax of jsp include?
+Ans.jsp:include page="filename"/>
+
+Q4.Which of the below statement is used to import a file?
+Ans.<%page import ="packagename.className"%>
+
+Q5.tag that is used to forward the request to specified file
+Ans.<jsp:forward page="filename"/>
+
+Q6.URL remains unchanged when we make use of response.sendRedirect("filename") method?
+Ans.false
+
+Q7.Objects that are created by the web container are known as _______________
+Ans.implicit objects
+
+Q8.MVC stands for?
+Ans.model view controller
+
+Q9.Model deals with ___________
+View deals with ___________
+Controller deals with ___________
+Ans.databse,UI,Business Logic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+Q1.Increment operator is a binary operator.
+Ans.false
+
+Q2.public class TestArithmeticOperation {
+ 
+public static void main(String[] args) {
+ 
+    int a=3;
+    a=a++;
+    System.out.println("Post-Increment a: " +a);
+ 
+    a=++a;
+    System.out.println("Pre-Increment a: "+a );
+ 
+    a=a--;
+    System.out.println("Post-Decrement a: " +a);
+ 
+    a=--a;
+    System.out.println("Pre-Decrement a: "+a );
+    }
+ 
+}
+Ans.3,4,4,3
+
+Q3.There are two conditions: Condition 1 and Condition 2.
+Condition 1 is true
+Condition 2 is false
+Condition1 And Condition2 = ?
+Ans.false
+
+Q4.There are two conditions,Condition 1 and Condition 2.
+Condition 1 is false
+Condition 2 is false
+Condition OR Condition 2 = ?
+Ans.false
+
+Q5.Which symbol is used for not operator?
+Ans.!
+
+Q6.How many operands are present in Ternary operator?
+Ans.3
+
+Q7.Identify Correct syntax of the Ternary operator.
+Ans.boolean x=(4>1)?false:true;
+
+Q8.public static void main(String[] args) {
+ 
+    float x =4;
+          x*=5;
+          x-=6;
+          x+=1;
+          x/=2;
+ 
+        System.out.println(x);
+ 
+    }
+Ans.7.5(4*5-6+1/2)
+
+Q9.Which of the following is not a decision-making statement in Java?
+Ans.do while
+
+Q10.How many operands are present in the Unary operator?
+Ans.one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

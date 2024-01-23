@@ -1,0 +1,22 @@
+Q1.Which one is a valid declaration of a Boolean?
+Anss.boolean b=false;
+
+Q2.When automatic type conversion can takes place in Java?
+Ans.Both elements have compatible datatype and size of destination type is larger than resource
+
+Q3.Modulus operator, %, can be applied to which of these? 
+Ans.both integers and floating point number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
